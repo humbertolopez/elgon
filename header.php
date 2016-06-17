@@ -38,9 +38,11 @@
 							?>
 								<!-- cat item -->
 								<li>
-									<img src="<?php echo get_template_directory_uri(); ?>/img/submenu/<?php echo $cat->slug; ?>.jpg">
-									<h4><?php echo $cat->name; ?></h4>
-									<p><a href="<?php bloginfo('url'); ?>/<?php echo $cat->slug; ?>">Ver Productos</a></p>
+									<a href="<?php bloginfo('url'); ?>/<?php echo $cat->slug; ?>">
+										<img src="<?php echo get_template_directory_uri(); ?>/img/submenu/<?php echo $cat->slug; ?>.jpg">									
+										<h4><?php echo $cat->name; ?></h4>
+										<p>Ver Productos</p>
+									</a>
 								</li>
 								<!-- fin cat item -->
 							<?php endforeach; ?>
@@ -54,11 +56,11 @@
 					<a href="<?php bloginfo('url'); ?>/mundo-elgon">Mundo Elgon</a>
 				</li>
 				<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
-					<a href="#">Distribuidores</a>
+					<a href="distribuidores">Distribuidores</a>
 				</li>
-				<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12">
+				<!-- <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12">
 					<a href="<?php bloginfo('url'); ?>/encuentra-tu-salon">Encuentra tu salón</a>
-				</li>
+				</li> -->
 				<li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11">
 					<a href="<?php bloginfo('url'); ?>/contacto">Contacto</a>
 				</li>

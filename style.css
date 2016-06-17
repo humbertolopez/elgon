@@ -353,7 +353,7 @@ footer {
     position: absolute;
     visibility: hidden;
     z-index: 999;
-    left: -350px;
+    left: -540px;
 }
 #products-submenu {	
 	width: 100%;
@@ -391,10 +391,14 @@ footer {
 #products-submenu p {
 	font-size: 0.875em;
 	text-transform: uppercase;
+    color: #c65c5c;
 }
-#products-submenu p a {
-	color: #c65c5c;
+#products-submenu a {
 	text-decoration: none;
+	transition: opacity .5s;
+}
+#products-submenu a:hover {
+	opacity: 0.5;
 }
 /* fin submenu productos */
 .subproductos {
@@ -417,7 +421,125 @@ footer {
 .historia-main, .historia-second, .historia-third, .historia-fourth {
 	width: 100%;
 	max-width: 1140px;
+	clear: both;
 	margin: auto;
+}
+.historia-main > div {
+	margin: 40px auto;
+}
+.historia-main p, .historia-second p, .historia-fourth {
+	color: #b3b3b3;
+	font-size: 0.875em:;
+}
+.historia-main h2, .historia-third h2, .historia-fourth h2 {
+	font-size: 1.8125em;
+	font-family: 'Courier New', monospace;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	position: relative;
+	padding: 10px 0;
+	margin: 10px 0;
+}
+.historia-third h2, .historia-fourth h2 {
+	color: #ff9999;
+}
+h2.llamadopink {
+	font-size: 1.4em;
+	font-family: 'Courier New', monospace;
+	font-style: italic;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	position: relative;	
+	color: #ff9999;
+}
+.pinkbracket {
+    padding: 35px 10px;
+    margin: 10px 0;
+}
+.pinkbracket:after {
+	content: "";
+	width: 10%;
+	height: 100%;
+	position: absolute;
+	border-right: 5px solid #ff9999;
+	border-top: 5px solid #ff9999;
+	border-bottom: 5px solid #ff9999;
+	top: 0;
+	right: 0;
+}
+.historia-main h3 {
+	font-family: 'Lato', sans-serif;
+	font-size: 0.875em;	
+	text-transform: uppercase;
+	color: #ff9999;
+}
+.historia-third h3 {
+	font-size: 1.18em;
+	font-family: 'Courier New', monospace;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	position: relative;
+	padding: 10px 0;
+	margin: 10px 0;	
+}
+.historia-elgon {
+	float: right;
+	width: 30%;
+    padding: 0 5% 0 5%;
+}
+.historia-mexico {
+	float: left;
+    width: 40%;
+    padding: 0 5% 0 5%;
+}
+.historia-grita {
+	float: right;
+	width: 45%;
+	padding: 0 0 0 5%;
+}
+.historia-valores {
+	float: right;
+	width: 30%;
+	padding: 0 0 0 5%;	
+}
+.titular-filosofia {
+	float: left;
+	width: 40%;
+}
+.filosofia {
+	float: right;
+	width: 40%;
+}
+.historia-img {
+	float: left;	
+}
+.grita-head {
+	width: 100%;
+	position: relative;
+}
+.grita-head h2 {
+	position: absolute;
+	top: 35%;
+	width: 75%;
+	right: 0;
+	text-align: right;
+	padding: 10px 0;
+	margin: 10px 0;
+}
+.valores-block {
+	position: relative;
+    padding: 10px 20px 10px 0;
+	z-index: 999;
+}
+.valores-block:after {
+	content: "";
+	background: #ff9999;
+	top: 0;
+	right: 0;
+	width: 140%;
+	height: 100%;
+	position: absolute;
+    z-index: -1;
 }
 /* fin historia */
 /*
