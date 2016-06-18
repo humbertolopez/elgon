@@ -57,7 +57,7 @@
 				<?php the_content(); ?>
 			</div>
 		</div>
-		<?php endwhile; endif; wp_reset_postdata(); ?>	
+		<?php endwhile; endif; wp_reset_postdata(); ?>
 </section>
 <section class="historia-fourth">
 	<?php
@@ -66,10 +66,10 @@
 		));
 		if($filosofia->have_posts()) : while($filosofia->have_posts()) : $filosofia->the_post();
 	?>
-	<h2 class="titular-filosofia"><?php the_title(); ?></h2>
+	<h3 class="titular-filosofia"><?php the_title(); ?></h3>
 	<div class="filosofia">
 		<?php the_content(); ?>
 	</div>
-	<?php endwhile; endif; wp_reset_postdata(); ?>	
+	<?php endwhile; endif; wp_reset_postdata(); ?>
 </section>
 <?php get_footer(); ?>

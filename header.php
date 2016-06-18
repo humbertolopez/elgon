@@ -19,6 +19,9 @@
 </head>
 <body>
 	<header>
+		<!-- logo -->
+		<a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
+		<!-- /logo -->
 		<!-- menu -->
 		<div class="menu-principal-elgon-container">
 			<ul id="menu-principal-elgon" class="menu">
