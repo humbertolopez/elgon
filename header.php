@@ -3,6 +3,7 @@
 <head>
 	<?php wp_head(); ?>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
 		<?php
 			if(is_home()){ ?>
@@ -56,7 +57,7 @@
 					<a href="<?php bloginfo('url'); ?>/historia">Historia</a>
 				</li>
 				<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9">
-					<a href="<?php bloginfo('url'); ?>/mundo-elgon">Mundo Elgon</a>
+					<a href="<?php bloginfo('url'); ?>/blog">Mundo Elgon</a>
 				</li>
 				<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 					<a href="distribuidores">Distribuidores</a>

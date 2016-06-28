@@ -111,5 +111,52 @@
 	//agrega soporte para imagenes destacadas
 	add_theme_support('post-thumbnails');
 	//nuevo tamaño de thumb
-	add_image_size('carrusel',9999,165);	
+	add_image_size('carrusel',9999,165);
+	//thumb para blog
+	add_image_size('blog',9999,220);
+	//migajas de pan
+	function write_breadcrumb() {
+		$pid = $post->ID;
+		$trail = '<a href="'.get_bloginfo('url').'">'. __('Inicio', 'textdomain') .'</a>';
+
+		if (is_front_page()) {
+	        // do nothing
+		}
+		elseif (is_page()) {
+			$bcarray = array();
+			$pdata = get_post($pid);
+			$bcarray[] = ' &raquo; '.$pdata->post_title."\n";
+		while ($pdata->post_parent) {
+			$pdata = get_post($pdata->post_parent);
+			$bcarray[] = ' &raquo; <a href="'.get_permalink($pdata->ID).'">'.$pdata->post_title.'</a>';
+		}
+		$bcarray = array_reverse($bcarray);
+			foreach ($bcarray AS $listitem) {
+				$trail .= $listitem;
+			}
+		}
+		elseif (is_single()) {
+			$pdata = get_the_category('');
+			$adata = get_post($pid);
+			if(!empty($pdata)){
+				$data = get_category_parents($pdata[0]->cat_ID, TRUE, ' &raquo; ');
+				$trail .= " &raquo; ".substr($data,0,-8);
+			}
+			$trail.= ' &raquo; '.$adata->post_title."\n";
+		}
+	   	elseif (is_category()) {
+			$pdata = get_the_category($pid);
+			$data = get_category_parents($pdata[0]->cat_ID, TRUE, ' &raquo; ');
+			if(!empty($pdata)){
+				$trail .= " &raquo; ".substr($data,0,-8);
+			}
+	   }
+		$trail.="";
+		return $trail;
+	}
+	//reduce el numero de palabras en el excerpt
+	function wpdocs_custom_excerpt_length( $length ) {
+	    return 20;
+	}
+	add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 ?>

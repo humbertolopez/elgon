@@ -1,0 +1,171 @@
+* {margin: 0; padding: 0; border: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box;
+}
+img { width: 100%; }
+
+/* ===== PAGE DISTRIBUIDORES ===== */
+.contenedor-top, .contenedor-beneficios, .contenedor-requisitos { display: block; margin: 0 auto; max-width: 1140px; width: 100%; }
+.contenedor-top { background: url('images/elgon-distribuidores-top-right-bg.jpg') right top no-repeat;  margin-bottom: 40px; position: relative; }
+.dist-top-left { background: url('images/elgon-distribuidores-top-bg.png') left center no-repeat; padding: 20px 0 20px 100px; }
+.dist-top-right { padding: 0 50px; padding-left: 33%; position: absolute; width: 100%; z-index: 10; top: 100px; }
+.dist-top-right h2 { color: #C65C5C; font-family: courier, times, serif; font-size: 28px; font-style: italic; letter-spacing: 8px; }
+.cont-top-right img, .txt-cont-top-right { display: inline-block; width: 49%; vertical-align: middle; }
+.cont-top-right img { max-width: 350px; margin: 0 auto; }
+.dist-top-left img { max-width: 400px; }
+.txt-cont-top-right { width: 50%; }
+.txt-cont-top-right h3 { color: #666; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 18px; margin-bottom: 10px; }
+.txt-cont-top-right p { color: #666; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 14px; margin-top: 10px; }
+.txt-cont-top-right img { max-width: 80px; }
+
+.contenedor-beneficios { margin-bottom: 40px; padding: 0 50px; }
+.dist-beneficios-left, .dist-beneficios-right { display: inline-block; vertical-align: top; width: 40%; }
+.dist-beneficios-left { background: url('images/elgon-distribuidores-beneficios-bg.jpg') left top no-repeat; margin-top: 40px; }
+.dist-beneficios-left h2 { color: #111; font-family: courier, times, serif; font-size: 28px; letter-spacing: 8px; margin-bottom: 30px; padding: 30px 45px; padding-right: 10px; }
+.dist-beneficios-left img { max-width: 400px; }
+.dist-beneficios-right { padding-left: 20px; width: 59%; }
+.dist-beneficios-right ul { background: #F2F2F2; padding: 20px 40px; }
+.dist-beneficios-right ul li { background: url('images/elgon-distribuidores-beneficios-indicador.png') left center no-repeat; padding-left: 60px; list-style-type: none; margin: 24px 0; }
+.dist-beneficios-right ul li h3 { color: #111; font-family: courier, times, serif; font-size: 20px; letter-spacing: 8px; margin-bottom: 10px; }
+.dist-beneficios-right ul li p { color: #515151; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 14px; }
+
+.contenedor-requisitos { margin-bottom: 40px; margin-top: -120px; padding: 0 50px 0 120px; }
+.dist-requisitos-left, .dist-requisitos-right { display: inline-block; vertical-align: bottom; width: 40%; }
+.dist-requisitos-left { background: url('images/elgon-distribuidores-requisitos-bg.jpg') left top no-repeat; background-size: contain; margin-top: 40px;  }
+.dist-requisitos-left h2 { color: #111; font-family: courier, times, serif; font-size: 28px; letter-spacing: 8px; margin-bottom: 30px; padding: 40px 45px; padding-right: 10px; }
+.dist-requisitos-left ul { margin-bottom: 40px; padding-left: 45px; padding-bottom: 10px; }
+.dist-requisitos-left li { display: inline-block; list-style-type: none; text-align: center; vertical-align: top; width: 30%; }
+.dist-requisitos-left li img { max-width: 80px; }
+.dist-requisitos-left li p { color: #515151; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 14px; }
+.dist-requisitos-right { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeccb9+0,c65c5c+100 */
+background: #eeccb9; /* Old browsers */
+background: -moz-linear-gradient(left,  #eeccb9 0%, #c65c5c 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #eeccb9 0%,#c65c5c 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #eeccb9 0%,#c65c5c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeccb9', endColorstr='#c65c5c',GradientType=1 ); /* IE6-9 */
+padding: 8px; width: 59%; }
+.dist-form { background: #FFF; padding: 30px; }
+.dist-form p { color: #515151; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 14px; margin-bottom: 10px; }
+.dist-form img { max-width: 109px; }
+.dist-form form { margin-top: 10px; }
+.dist-form .campos { background: #F2F2F2; border: 2px solid #F2F2F2; color: #535D8C; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 12px; margin: 5px 0; padding: 12px 10px; width: 100%; }
+.dist-form .campos:focus { outline: 0; border: 2px solid #F2F2F2; }
+.dist-form .btn-enviar { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f93dc+0,484561+100 */
+background: #9f93dc; /* Old browsers */
+background: -moz-linear-gradient(left,  #9f93dc 0%, #484561 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #9f93dc 0%,#484561 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #9f93dc 0%,#484561 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f93dc', endColorstr='#484561',GradientType=1 ); /* IE6-9 */
+ color: #FFF; cursor: pointer; display: block; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 14px; font-weight: 700; padding: 10px; text-align: center; width: 100%; }
+.dist-form .btn-enviar:hover { background: #535D8C; }
+
+/* ===== PAGE CONTACTO =====*/
+.contenedor-contacto { margin: 0 auto; max-width: 900px; text-align: center; width: 100%; }
+.contacto-img, .contacto-txt { display: inline-block; vertical-align: middle; width: 49%; }
+.contacto-img img { max-width: 440px; }
+.contacto-txt { border: 10px solid transparent;
+       -moz-border-image: -moz-linear-gradient(left,#eeccb9 0%, #c65c5c 100%);
+       -webkit-border-image: -webkit-linear-gradient(left,#eeccb9 0%, #c65c5c 100%);
+       border-image: linear-gradient(to right,#eeccb9 0%, #c65c5c 100%);
+       border-image-slice: 1; margin-left: -50px; width: 50%; }
+.cont-form { padding: 20px 80px; width: 100%; position: relative; text-align: left; }
+.cont-form img { max-width: 109px; }
+.img-sobre { position: absolute; top: 10px; right: 10px; }
+.img-sobre img { max-width: 60px; }
+.cont-form h3 { color: #C65C5C; font-family: courier, times, serif; font-size: 18px; font-weight: bolder; letter-spacing: 4px; }
+.cont-form p { color: #515151; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 14px; margin: 10px 0; }
+.cont-form .campos { background: #F2F2F2; border: 2px solid #F2F2F2; color: #535D8C; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 12px; margin: 5px 0; padding: 12px 10px; width: 100%; }
+.cont-form .campos:focus { outline: 0; border: 2px solid #F2F2F2; }
+.cont-form .btn-enviar-cont { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f93dc+0,484561+100 */
+background: #9f93dc; /* Old browsers */
+background: -moz-linear-gradient(left,  #9f93dc 0%, #484561 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #9f93dc 0%,#484561 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #9f93dc 0%,#484561 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f93dc', endColorstr='#484561',GradientType=1 ); /* IE6-9 */
+ color: #FFF; cursor: pointer; display: block; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 14px; font-weight: 700; padding: 10px; text-align: center; width: 100%; }
+.cont-form .btn-enviar-cont:hover { background: #535D8C; }
+
+/* ===== DESARROLLO ===== */
+.contenedor-desarrollo { margin: 0 auto; max-width: 1140px; text-align: center; width: 100%; }
+.desarrollo-der, .desarrollo-contacto { display: inline-block; vertical-align: middle; width: 65%; text-align: left; }
+.desarrollo-der { background: url('images/elgon-desarrollo-top-bg.jpg') center left no-repeat; background-size: contain; padding: 20px; }
+.desarrollo-contacto { border: 10px solid #eaeaea; width: 34%; }
+/*.desarrollo-der img { max-width: 690px; }*/
+
+.txt-blog, .titulo-blog { display: inline-block; vertical-align: middle; width: 49%; }
+.txt-blog h3 { color: #C65C5C; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 16px; }
+.txt-blog p { color: #515151; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 14px; }
+.titulo-blog { background: #FFF url('images/elgon-desarrollo-ttl-blog-bg.jpg') center right no-repeat; background-size: contain; text-align: right; }
+.titulo-blog h2 { color: #111; font-family: courier, times, serif; font-size: 32px; padding: 100px 60px; text-align: left; }
+
+.desar-form { padding: 20px; position: relative; text-align: left; }
+.desar-form img { max-width: 109px; }
+.img-sobre { position: absolute; top: 10px; right: 10px; }
+.img-sobre img { max-width: 60px; }
+.desar-form h3 { color: #C65C5C; font-family: courier, times, serif; font-size: 18px; font-weight: bolder; letter-spacing: 4px; }
+.desar-form p { color: #515151; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 14px; margin: 10px 0; }
+.desar-form .campos { background: #F2F2F2; border: 2px solid #F2F2F2; color: #535D8C; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 12px; margin: 5px 0; padding: 12px 10px; width: 100%; }
+.desar-form .campos:focus { outline: 0; border: 2px solid #F2F2F2; }
+.desar-form .btn-enviar-cont { 
+background: #9f93dc; 
+background: -moz-linear-gradient(left,  #9f93dc 0%, #484561 100%);
+background: -webkit-linear-gradient(left,  #9f93dc 0%,#484561 100%); 
+background: linear-gradient(to right,  #9f93dc 0%,#484561 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f93dc', endColorstr='#484561',GradientType=1 );
+ color: #FFF; cursor: pointer; display: block; font-family: 'Lato', verdana, helvetica, sans-serif; font-size: 14px; font-weight: 700; padding: 10px; text-align: center; width: 100%; }
+.desar-form .btn-enviar-cont:hover { background: #535D8C; }
+
+.desarrollo-articulos { margin: 0 auto; max-width: 1140px; text-align: center; width: 100%; }
+.cont-articulo { float: left; width: 33%; padding: 10px; margin: 10px 0; text-align: center; }
+.cont-articulo p { color: #111; font-family: courier, times, serif; font-size: 15px; font-weight: bolder; padding: 10px; margin: 10px 0; }
+.cont-articulo a { border-top: 2px solid #C65C5C; border-bottom: 2px solid #FFF; color: #C65C5C; font-family: courier, times, serif; font-size: 15px; font-weight: bolder; text-decoration: none; padding: 10px; }
+.cont-articulo a:hover { border-bottom: 2px solid #C65C5C; border-top: 2px solid #FFF; }
+
+.desarrollo-articulos h3 {
+	color: #C65C5C; font-family: courier, times, serif; font-size: 15px; font-weight: bolder; text-decoration: none;
+}
+
+@media screen and (max-width: 1040px) {
+	.contenedor-requisitos { margin-bottom: 40px; margin-top: 0; padding: 0 50px; }
+}
+@media screen and (max-width: 900px) {
+	.contenedor-top { position: static; }
+	.dist-top-left { padding: 20px 0 20px 100px; }
+	.dist-top-right { margin-top: 20px;padding: 0 20px; position: static; width: 100%; }
+
+	.contenedor-beneficios { margin-bottom: 40px; padding: 0 10px; }
+	.dist-beneficios-left, .dist-beneficios-right { display: block; width: 100%; }
+	
+	.dist-beneficios-left { margin-bottom: 20px; }
+	.dist-beneficios-right { padding-left: 0; width: 100%; }
+
+	.contenedor-requisitos { padding: 0 10px; }
+	.dist-requisitos-left, .dist-requisitos-right { display: block; width: 100%; }
+	.dist-requisitos-left { margin-top: 20px;  }
+
+	.contenedor-contacto { margin: 0 auto; max-width: 900px; text-align: center; width: 100%; }
+	.contacto-img, .contacto-txt { display: block; width: 100%; }
+	.contacto-img { display: none; }
+	.contacto-txt { margin-left: 0; }
+	.cont-form { padding: 20px 20px; }
+
+	.desarrollo-der, .desarrollo-contacto { display: block; width: 100%; }
+	.desarrollo-contacto { margin: 40px 0; }
+	.cont-articulo, .cont-articulo-dos { width: 50%; }
+}
+@media screen and (max-width: 580px) {
+	.cont-top-right img, .txt-cont-top-right { display: block; width: 100%; }
+
+	.dist-beneficios-right ul { padding: 20px 10px; }
+
+	.txt-blog, .titulo-blog { display: block; margin: 20px 0; width: 100%; }
+	.cont-articulo, .cont-articulo-dos { width: 100%; }
+}
+@media screen and (max-width: 380px) {
+	.dist-top-right h2 { font-size: 28px; letter-spacing: 4px; }
+
+	.dist-beneficios-right ul li h3 { font-size: 16px; letter-spacing: 2px; }
+
+	.dist-beneficios-left h2 { font-size: 22px; letter-spacing: 4px; margin-bottom: 30px; padding: 30px 45px; padding-right: 10px; }
+
+	.dist-requisitos-left h2 { font-size: 22px; letter-spacing: 4px; margin-bottom: 30px; padding: 20px 25px; padding-right: 10px; }
+	.dist-requisitos-left ul { margin-bottom: 40px; padding-left: 15px; padding-bottom: 10px; }
+}
