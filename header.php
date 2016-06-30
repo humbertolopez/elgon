@@ -71,5 +71,10 @@
 			</ul>
 		</div>
 		<!-- fin menu -->
+		<!-- info -->
+		<div class="rrhh">
+			<p><a class="session" href="<?php bloginfo('url'); ?>/iniciar-sesion">Iniciar sesión</a> Tel. (33) 3854.0556 / (33) 3854.3000 <img src="<?php echo get_template_directory_uri(); ?>/img/fb.png"> <img src="<?php echo get_template_directory_uri(); ?>/img/in.png"></p>
+		</div>
+		<!-- fin info -->
 	</header>
 	<!-- head -->	

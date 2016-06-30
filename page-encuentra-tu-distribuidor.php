@@ -2,19 +2,18 @@
 <section class="contenedor-distribuidores">
 
     <div class="distribuidores-head">
-        <h1>¿Eres estilista o barbero profesional?</h1>
-        <h2>Ofrece a tus clientes productos profesionales</h2>
-        <p>Elgon México, cuenta con más de  30  distribuidores en toda la República Mexicana, ¡Conoce nuestras 6 líneas de productos: haircare, haircolor, decolore, styling&finish, texturization y man, reconocidos internacionalmente por su calidad de origen italiano.</p>
+        <div class="distribuidores-head-content">
+            <h1>¿Eres estilista o barbero profesional?</h1>
+            <h2>Ofrece a tus clientes productos profesionales</h2>
+            <p>Elgon México, cuenta con más de  30  distribuidores en toda la República Mexicana, ¡Conoce nuestras 6 líneas de productos: haircare, haircolor, decolore, styling&finish, texturization y man, reconocidos internacionalmente por su calidad de origen italiano.</p>
+        </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/encuentra-tu-distribuidor-header.jpg">
     </div>
 
-    <div class="contacto-txt">
+    <div class="encuentra-contacto">
         
-        <div class="cont-form">
-
-            <div class="img-sobre"><img src="<?php echo get_template_directory_uri(); ?>/img/elgon-contacto-icono.png" alt="Elgon&reg; Colore &amp; Poesia | Líder italiano de productos para el cuidado capilar" ></div>
-            <h3>SOLICITA M&Aacute;S INFORMACI&Oacute;N</h3>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/elgon-distribuidores-separador-form.jpg" alt="Elgon&reg; Colore &amp; Poesia | Líder italiano de productos para el cuidado capilar" />
-            <p>Por favor llena los siguientes datos que a continuaci&oacute;n aparecen y nos pondremos en contacto tan pronto sea posible.</p>
+        <div class="desar-form">
+            <h3>Encuentra a tu distribuidor</h3>            
             <form action="#" method="POST">
                 <input class="campos" type="text" name="nombre" required placeholder="NOMBRE COMPLETO" />
                 <input class="campos" type="text" name="correo" required placeholder="CORREO ELECTR&Oacute;NICO" />
@@ -24,11 +23,17 @@
                 <input class="campos" type="text" name="donde-te-enteraste" required placeholder="¿D&Oacute;NDE TE ENTERASTE DE NOSOTROS?" />
                 <textarea class="campos" name="comentarios" required placeholder="COMENTARIOS"></textarea>
                 <input class="btn-enviar-cont" type="submit" value="ENVIAR" />
-            </form>
-            
+            </form>            
         </div>
 
     </div>
 
+</section>
+<section class="contenedor-distribuidores">
+    <img class="mapa-dist" src="<?php echo get_template_directory_uri(); ?>/img/mexico.png">
+    <div class="mapa-desc">
+        <h1>Más de 30 distribuidores en México</h1>
+        <p class="mapa-lista">Estados donde está presente elgon: Jalisco, Sinaloa, Yucatán, Veracruz, Chiapas, Oaxaca, Michoacán, Tamaulipas, Puebla, Tabasco, Quintana Roo, Colima, Aguascalientes, Campeche, San Luis Potosí, Zacatecas, Guerrero, Chihuahua.</p>
+    </div>
 </section>
 <?php get_footer(); ?>
