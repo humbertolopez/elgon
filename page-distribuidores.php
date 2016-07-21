@@ -43,16 +43,29 @@
         <div class="dist-form">
             <p>Si cumples con los requisitos, te invitamos a llenar el siguiente formulario y nos pondremos en contacto contigo:</p>
             <img src="<?php echo get_template_directory_uri(); ?>/img/elgon-distribuidores-separador-form.jpg" alt="Elgon&reg; Colore &amp; Poesia | Líder italiano de productos para el cuidado capilar" />
-            <form action="#" method="POST">
+            <?php
+                $host = 'http://'.$_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+                if($host == get_permalink().'?error'){
+                    ?>
+                        <p class="msg-error">Revisa tus datos antes de enviarlos. Todos los campos son requeridos.</p>
+                    <?php
+                } else if ($host == get_permalink().'?success'){
+                    ?>
+                        <p class="msg">¡Gracias por solicitar información!</p>
+                    <?php
+                }                
+            ?>
+            <form action="<?php echo get_template_directory_uri(); ?>/distribuidor-submit.php" method="POST">
                 <input class="campos" type="text" name="nombre" required placeholder="NOMBRE COMPLETO" />
-                <input class="campos" type="text" name="nombre-establecimiento" required placeholder="NOMBRE DE ESTABLECIMIENTO" />
+                <input class="campos" type="text" name="nombrenegocio" required placeholder="NOMBRE DE ESTABLECIMIENTO" />
                 <input class="campos" type="text" name="correo" required placeholder="CORREO ELECTR&Oacute;NICO" />
-                <input class="campos" type="text" name="nombre" required placeholder="TEL&Eacute;FONO CELULAR" />
-                <input class="campos" type="text" name="ciudad-estado" required placeholder="CIUDAD/ESTADO" />
-                <input class="campos" type="text" name="que-productos" required placeholder="¿QU&Eacute; PRODUCTOS DISTRIBUYES ACTUALMENTE?" />
-                <input class="campos" type="text" name="esteticas-clientes" required placeholder="¿CUANTAS EST&Eacute;TICAS TIENES COMO CLIENTES ACTUALMENTE?" />
+                <input class="campos" type="text" name="telefono" required placeholder="TEL&Eacute;FONO CELULAR" />
+                <input class="campos" type="text" name="ciudadestado" required placeholder="CIUDAD/ESTADO" />
+                <input class="campos" type="text" name="queproductos" required placeholder="¿QU&Eacute; PRODUCTOS DISTRIBUYES ACTUALMENTE?" />
+                <input class="campos" type="text" name="esteticasclientes" required placeholder="¿CUANTAS EST&Eacute;TICAS TIENES COMO CLIENTES ACTUALMENTE?" />
                 <textarea class="campos" name="comentarios" required placeholder="COMENTARIOS"></textarea>
-                <input class="btn-enviar" type="submit" value="ENVIAR" />
+                <input class="campo-hid" type="text" name="url" required value="<?php echo get_permalink( $post->ID ); ?>" />
+                <input class="btn-enviar" type="submit" name="submit" value="ENVIAR" />
             </form>
         </div>
     </div>

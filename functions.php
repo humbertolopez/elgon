@@ -43,6 +43,18 @@
 		}
 	}
 	add_action('wp_enqueue_scripts','caroufredsel');
+
+	function nivo_lightbox(){
+		wp_register_script('nivolightbox',get_template_directory_uri().'/js/nivo-lightbox.js',array('jquery'),1.0,true);
+		wp_register_script('startlightbox',get_template_directory_uri().'/js/start-lightbox.js',array('jquery'),1.0,false);
+		wp_register_style('nivolightboxstyle',get_template_directory_uri().'/js/nivo-lightbox.css',array(),1.0,'all');
+		wp_register_style('nivolightboxthemestyle',get_template_directory_uri().'/js/themes/default/default.css',array(),1.0,'all');	
+		wp_enqueue_script('nivolightbox');
+		wp_enqueue_script('startlightbox');
+		wp_enqueue_style('nivolightboxstyle');
+		wp_enqueue_style('nivolightboxthemestyle');
+	}
+	add_action('wp_enqueue_scripts','nivo_lightbox');
 	
 	class extra_elgon_fields {
 		function __construct(){
@@ -113,7 +125,7 @@
 	//nuevo tamaño de thumb
 	add_image_size('carrusel',9999,165);
 	//thumb para blog
-	add_image_size('blog',9999,220);
+	add_image_size('blog',9999,200,true);
 	//migajas de pan
 	function write_breadcrumb() {
 		$pid = $post->ID;
@@ -159,4 +171,109 @@
 	    return 20;
 	}
 	add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+	//evaluaciones
+	function save_evaluaciones()
+	{
+		global $current_user;
+		$horaactual = current_time('mysql');
+		//
+		$eval1quest1 = $_POST['eval1quest1'];
+		$eval1quest2 = $_POST['eval1quest2'];
+		$eval1quest3 = $_POST['eval1quest3'];
+		$eval1quest4 = $_POST['eval1quest4'];
+		$eval1quest5 = $_POST['eval1quest5'];
+		$eval1quest6 = $_POST['eval1quest6'];
+		$eval1quest7 = $_POST['eval1quest7'];
+		$eval1quest8 = $_POST['eval1quest8'];
+		$eval1quest9 = $_POST['eval1quest9'];
+		$eval1quest10 = $_POST['eval1quest10'];
+		$eval1quest11 = $_POST['eval1quest11'];
+		$eval1quest12 = $_POST['eval1quest12'];
+		$eval1quest13 = $_POST['eval1quest13'];		
+		//respuestas
+		$respuestas = array(
+			'_eval1quest1' => $eval1quest1,
+			'_eval1quest2' => $eval1quest2,
+			'_eval1quest3' => $eval1quest3,
+			'_eval1quest4' => $eval1quest4,
+			'_eval1quest5' => $eval1quest5,
+			'_eval1quest6' => $eval1quest6,
+			'_eval1quest7' => $eval1quest7,
+			'_eval1quest8' => $eval1quest8,
+			'_eval1quest9' => $eval1quest9,
+			'_eval1quest10' => $eval1quest10,
+			'_eval1quest11' => $eval1quest11,
+			'_eval1quest12' => $eval1quest12,
+			'_eval1quest13' => $eval1quest13,
+		);
+		$soluciones = array(
+			'_eval1quest1' => 'b',
+			'_eval1quest2' => 'a',
+			'_eval1quest3' => 'a',
+			'_eval1quest4' => 'b',
+			'_eval1quest5' => 'a',
+			'_eval1quest6' => 'c',
+			'_eval1quest7' => array('a','b','c','d'),
+			'_eval1quest8' => 'a',
+			'_eval1quest9' => 'a',
+			'_eval1quest10' => 'c',
+			'_eval1quest11' => 'a',
+			'_eval1quest12' => 'b',
+			'_eval1quest13' => 'c',
+		);
+		if(isset($_POST['submit-evaluacion']) && wp_verify_nonce($_POST['evaluacion-elgon-etapa-1-nonce'],'submit-evaluacion-nonce'))
+		{
+			foreach ($respuestas as $key => $respuesta)
+			{
+				update_user_meta($current_user->ID,$key,$respuesta);
+			}			
+			$resultado = array_intersect_assoc($respuestas,$soluciones);
+			update_user_meta($current_user->ID,'_resultadoeval1',$resultado);
+			update_user_meta($current_user->ID,'_horarioeval1',$horaactual);
+			wp_redirect(home_url().'/distribuidor-home/evaluaciones/evaluacion-elgon-etapa-1/resultados');
+		}
+	}
+	add_action('init','save_evaluaciones');
+	//evaluacion 2
+	function save_evaluaciones2()
+	{
+		global $current_user;
+		$horaactual = current_time('mysql');
+		// evaluacion 2
+		$eval2quest1 = $_POST['eval2quest1'];
+		$eval2quest2 = $_POST['eval2quest2'];
+		$eval2quest3 = $_POST['eval2quest3'];
+		$eval2quest4 = $_POST['eval2quest4'];
+		$eval2quest5 = $_POST['eval2quest5'];
+		$eval2quest6 = $_POST['eval2quest6'];
+		//respuestas recibidas
+		$respuestas = array(
+			'_eval2quest1' => $eval2quest1,
+			'_eval2quest2' => $eval2quest2,
+			'_eval2quest3' => $eval2quest3,
+			'_eval2quest4' => $eval2quest4,
+			'_eval2quest5' => $eval2quest5,
+			'_eval2quest6' => $eval2quest6,			
+		);
+		$soluciones = array(
+			'_eval2quest1' => 'a',
+			'_eval2quest2' => 'b',
+			'_eval2quest3' => 'a',
+			'_eval2quest4' => 'a',
+			'_eval2quest5' => 'c',
+			'_eval2quest6' => 'b',
+		);
+		if(isset($_POST['submit-evaluacion2']) && wp_verify_nonce($_POST['evaluacion-elgon-etapa-2-nonce'],'submit-evaluacion2-nonce'))
+		{
+			foreach ($respuestas as $key => $respuesta)
+			{
+				update_user_meta($current_user->ID,$key,$respuesta);
+			}			
+			$resultado = array_intersect_assoc($respuestas,$soluciones);
+			update_user_meta($current_user->ID,'_resultadoeval2',$resultado);
+			update_user_meta($current_user->ID,'_horarioeval2',$horaactual);
+			wp_redirect(home_url().'/distribuidor-home/evaluaciones/evaluacion-elgon-etapa-2/resultados');
+		}
+	}
+	add_action('init','save_evaluaciones2');
 ?>

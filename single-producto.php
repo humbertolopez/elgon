@@ -36,6 +36,7 @@
 				<?php endwhile;  endif; wp_reset_postdata(); ?>
 			</ul>
 			<!-- fin lista de productos -->
+
 			<!-- loop de producto single -->
 			<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 				<div class="imagen-producto">
@@ -47,8 +48,14 @@
 					<?php
 						$ventajas = get_post_meta($post->ID,'_ventajas',true);
 						$presentaciones = get_post_meta($post->ID,'_presentaciones',true);
-						echo $ventajas;
-						echo '<p>'.$presentaciones.'</p>';
+						if(!empty($ventajas))
+						{
+							echo '<h2>Ventajas</h2>'.$ventajas.'';
+						}
+						if(!empty($presentaciones))
+						{
+							echo '<h2>Presentaciones</h2><p>'.$presentaciones.'</p>';
+						}
 					?>
 				</div>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
@@ -56,6 +63,7 @@
 		<?php
 	}
 	?>
+	
 		<div class="product-form">
 		    <h3>Solicita más información sobre este producto:</h3>
 		    <form action="#" method="POST">
